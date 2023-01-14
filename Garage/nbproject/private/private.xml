@@ -4,9 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/java/Garage_allan/Garage/src/java/controller/Controller_Admin.java</file>
+            <file>file:/D:/java/Garage_allan/Garage/web/Login.jsp</file>
+            <file>file:/D:/java/Garage_allan/Garage/src/java/service/Service_login.java</file>
             <file>file:/D:/java/Garage_allan/Garage/src/java/controller/Controller_employer.java</file>
+            <file>file:/D:/java/Garage_allan/Garage/src/java/controller/ControllerLogin.java</file>
+            <file>file:/D:/java/Garage_allan/Garage/web/accueil.jsp</file>
+            <file>file:/D:/java/Garage_allan/Garage/web/makaAnarana.jsp</file>
+            <file>file:/D:/java/Garage_allan/Garage/web/insertionEmployer.jsp</file>
+            <file>file:/D:/java/Garage_allan/Garage/web/WEB-INF/web.xml</file>
             <file>file:/D:/java/Garage_allan/Garage/src/java/model/Employe.java</file>
             <file>file:/D:/java/Garage_allan/Garage/src/java/service/Service_Employer.java</file>
+            <file>file:/D:/java/Garage_allan/Garage/web/mande.jsp</file>
         </group>
     </open-files>
 </project-private>

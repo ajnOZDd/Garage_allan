@@ -41,7 +41,7 @@ public class Controller_Admin extends HttpServlet {
             out.println("<h1>Servlet Controller_Admin at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-            Service_Admin admin
+
         }
     }
 
@@ -57,7 +57,7 @@ public class Controller_Admin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            request.getParameter(name);
+            
     }
 
 

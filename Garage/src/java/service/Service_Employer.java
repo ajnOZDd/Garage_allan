@@ -9,7 +9,9 @@ import DAO.BDD;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import model.Employe;
-
+import controller.ControllerLogin ;
+import java.util.ArrayList;
+import java.util.Vector;
 /**
  *
  * @author allan
@@ -40,9 +42,30 @@ public class Service_Employer {
      if(!name.equals("") && !username.equals("") && !date.equals("") ){
         bol=true ;
      }else{
-
+         
      }
      return bol ;
     }
+    
+     public Boolean chekInput (String name , String password){
+     Boolean bol =false;
+     if(name.equals("") && password.equals("")  ){
+     bol=false ;
+     }
+     return bol ;
+    }
+     
+     public ArrayList<String> maka (){
+         ArrayList<String> PostValeur = new ArrayList<String>() ;
+         PostValeur.add("Technicien Maintenance ") ;
+         PostValeur.add("Graisseur") ;
+         PostValeur.add("soudeur") ;
+         PostValeur.add("Logisticien") ;
+         PostValeur.add("Carossier") ;
+         PostValeur.add("controlleur") ;
+         PostValeur.add("aerodynamisien") ;
+         return PostValeur ;
+     }
+    
     
 }

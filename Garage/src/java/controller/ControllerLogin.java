@@ -7,7 +7,6 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author allan
  */
-public class Controller_employer extends HttpServlet {
+public class ControllerLogin extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,10 +35,10 @@ public class Controller_employer extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Controller_employer</title>");            
+            out.println("<title>Servlet ControllerLogin</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Controller_employer at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ControllerLogin at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -57,9 +56,7 @@ public class Controller_employer extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-
-
+        processRequest(request, response);
     }
 
     /**
@@ -70,10 +67,22 @@ public class Controller_employer extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    public void messsageErreur(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+             try (PrintWriter out = response.getWriter()) {
+                out.println("error");
+            }
+    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         String name = request.getParameter("name") ;
+         String password = request.getParameter("password") ;
+         String valeurvide ="" ;
+         request.getSession().setAttribute("name", name);
+         request.getSession().setAttribute("password", password);
+         response.sendRedirect("./accueil.jsp");
     }
 
     /**
